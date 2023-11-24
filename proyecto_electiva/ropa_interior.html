@@ -1,0 +1,331 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" sizes="16x16" href="Favicon/favicon-16x16.png">
+    <link rel="stylesheet" href="Style/estilo7.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <title>Ropa interior - ModaMujer</title>
+  </head>
+
+  <body>
+    
+    <style>
+      #carrito-container {
+        border: 2px solid #ff4d6d;
+        border-radius: 10px;
+        padding: 15px;
+        margin-top: 22px;
+        margin-left: 50px;
+        margin-right: 50px;
+        background-color: #f9f9f9;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+    
+      #carrito-container h3 {
+        color: #ff4d6d;
+        text-align: center;
+      }
+    
+      #carrito-list {
+        list-style-type: none;
+        padding: 0;
+      }
+    
+      #carrito-list li {
+        border-bottom: 1px solid #ddd;
+        padding: 8px;
+      }
+    
+      #carrito-total {
+        font-weight: bold;
+      }
+    
+      button {
+        background-color: #ff4d6d;
+        color: white;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        width: 100%;
+      }
+    
+      button:hover {
+        background-color: #c9184a;
+      }
+    </style>
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <img class="nav-link" src="img/OIG__2_-removebg-preview.png" height="100px" width="100px" alt="">
+                  </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="home.html">Página principal</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Productos
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="ropa.html">Ropa</a></li>
+                  <li><a class="dropdown-item" href="zapatos.html">Zapatos</a></li>
+                  <li><a class="dropdown-item" href="accesorios.html">Accesorios</a></li>
+                  <li><a class="dropdown-item" href="ropa_interior.html">Ropa interior</a></li>
+                </ul>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="help.html">Acerca de nosotros</a>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Contáctanos
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#"><i class="bi bi-facebook" style="color: blue;"></i> Facebook</a></li>
+                  <li><a class="dropdown-item" href="#"><i class="bi bi-instagram" style="color: deeppink;"></i> Instagram</a></li>
+                  <li><a class="dropdown-item" href="#"><i class="bi bi-tiktok"></i> Tik Tok</a></li>
+                </ul>
+              </li>
+              
+            </ul>
+      
+          </div>
+        </div>
+      </nav>
+
+      <div class="album py-5 bg-light">
+        <div class="container">
+    
+          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+            <div class="col">
+              <div class="card shadow-sm">
+                <img id="imagenes" class="bd-placeholder-img card-img-top" width="400px" height="400px" src="img/interior1.jpg" alt="">
+                <div class="card-body">
+                  <p class="card-text">Set x2 brasieres</p>
+                  <p class="card-text" id="precio">$49.900</p>
+                  <a href="#" onclick="agregarAlCarrito('Set x2 brasieres', 49900)"><i class="bi bi-cart-plus" style="font-size: 2.5rem;"></i>Agregar al carrito</a>
+                  <div class="d-flex justify-content-between align-items-center">
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="card shadow-sm">
+                <img id="imagenes" class="bd-placeholder-img card-img-top" width="400px" height="400px" src="img/interior2.jpg" alt="">
+                <div class="card-body">
+                  <p class="card-text">Set x3 interiores</p>
+                  <p class="card-text" id="precio">$44.900</p>
+                  <a href="#" onclick="agregarAlCarrito('Set x3 interiores', 44900)"><i class="bi bi-cart-plus" style="font-size: 2.5rem;"></i>Agregar al carrito</a>
+                  <div class="d-flex justify-content-between align-items-center">
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="card shadow-sm">
+                <img id="imagenes" class="bd-placeholder-img card-img-top" width="400px" height="400px" src="img/interior3.jpg" alt="">
+                <div class="card-body">
+                  <p class="card-text">Conjunto interior + brasier azul</p>
+                  <p class="card-text" id="precio">$30.900</p>
+                  <a href="#" onclick="agregarAlCarrito('Conjunto interior + brasier azul', 30900)"><i class="bi bi-cart-plus" style="font-size: 2.5rem;"></i>Agregar al carrito</a>
+                  <div class="d-flex justify-content-between align-items-center">
+                  </div>
+                </div>
+              </div>
+            </div>
+    
+            <div class="col">
+              <div class="card shadow-sm">
+                <img id="imagenes" class="bd-placeholder-img card-img-top" width="400px" height="400px" src="img/interior4.jpg" alt="">
+                <div class="card-body">
+                  <p class="card-text">Conjunto interior + brasier rosa</p>
+                  <p class="card-text" id="precio">$24.900</p>
+                  <a href="#" onclick="agregarAlCarrito('Conjunto interior + brasier rosa', 24900)"><i class="bi bi-cart-plus" style="font-size: 2.5rem;"></i>Agregar al carrito</a>
+                  <div class="d-flex justify-content-between align-items-center">
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="card shadow-sm">
+                <img id="imagenes" class="bd-placeholder-img card-img-top" width="400px" height="400px" src="img/interior5.jpg" alt="">
+                <div class="card-body">
+                  <p class="card-text">Body blanco</p>
+                  <p class="card-text" id="precio">$46.900</p>
+                  <a href="#" onclick="agregarAlCarrito('Body blanco', 46900)"><i class="bi bi-cart-plus" style="font-size: 2.5rem;"></i>Agregar al carrito</a>
+                  <div class="d-flex justify-content-between align-items-center">
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="card shadow-sm">
+                <img id="imagenes" class="bd-placeholder-img card-img-top" width="400px" height="400px" src="img/interior6.jpg" alt="">
+                <div class="card-body">
+                  <p class="card-text">Conjunto interior + brasier blanco</p>
+                  <p class="card-text" id="precio">$34.900</p>
+                  <a href="#" onclick="agregarAlCarrito('Conjunto interior + brasier blanco', 34900)"><i class="bi bi-cart-plus" style="font-size: 2.5rem;"></i>Agregar al carrito</a>
+                  <div class="d-flex justify-content-between align-items-center">
+                  </div>
+                </div>
+              </div>
+            </div>
+    
+            <div class="col">
+              <div class="card shadow-sm">
+                <img id="imagenes" class="bd-placeholder-img card-img-top" width="400px" height="400px" src="img/interior7.jpg" alt="">
+                <div class="card-body">
+                  <p class="card-text">Vestido de baño 2 piezas</p>
+                  <p class="card-text" id="precio">$65.500</p>
+                  <a href="#" onclick="agregarAlCarrito('Vestido de baño 2 piezas', 65500)"><i class="bi bi-cart-plus" style="font-size: 2.5rem;"></i>Agregar al carrito</a>
+                  <div class="d-flex justify-content-between align-items-center">
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="card shadow-sm">
+                <img id="imagenes" class="bd-placeholder-img card-img-top" width="400px" height="400px" src="img/interior8.jpg" alt="">
+                <div class="card-body">
+                  <p class="card-text">Vestido de baño floral 1 pieza</p>
+                  <p class="card-text" id="precio">$64.900</p>
+                  <a href="#" onclick="agregarAlCarrito('Vestido de baño floral 1 pieza', 64900)"><i class="bi bi-cart-plus" style="font-size: 2.5rem;"></i>Agregar al carrito</a>
+                  <div class="d-flex justify-content-between align-items-center">
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="card shadow-sm">
+                <img id="imagenes" class="bd-placeholder-img card-img-top" width="400px" height="400px" src="img/interior9.jpg" alt="">
+                <div class="card-body">
+                  <p class="card-text">Vestido de baño naranja 1 pieza</p>
+                  <p class="card-text" id="precio">$30.900</p> 
+                  <a href="#" onclick="agregarAlCarrito('Vestido de baño naranja 1 pieza', 30900)"><i class="bi bi-cart-plus" style="font-size: 2.5rem;"></i>Agregar al carrito</a>
+                  <div class="d-flex justify-content-between align-items-center">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="carrito-container">
+        <h3><i class="bi bi-cart-plus" style="font-size: 2.5rem;"></i> Carrito</h3>
+        <ul id="carrito-list"></ul>
+        <p>Total: $<span id="carrito-total">0</span></p>
+        <button onclick="finalizarCompra()">Finalizar Compra</button>
+      </div>
+
+      <footer class="text-body-secondary py-5">
+        <div class="container">
+          <p class="float-end mb-1">
+            <a href="home.html" style="margin: 8px;">Inicio</a>
+            <a href="login.html">Iniciar sesión o registrarse</a>
+            <img class="nav-link" src="img/OIG__2_-removebg-preview.png" height="100px" width="100px" alt="">
+          </p>
+          <p class="mb-1">2023 &copy; Todos los derechos reservados</p>
+          <p class="mb-1"> <a href="ropa.html">Ropa</a></p>
+          <p class="mb-1"> <a href="zapatos.html">Zapatos</a></p>    
+          <p class="mb-1"> <a href="accesorios.html">Accesorios</a></p>    
+          <p class="mb-1"> <a href="ropa_interior.html">Ropa interior</a></p>    
+        </div>
+      </footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+<script>
+  // Función para agregar un producto al carrito
+  function agregarAlCarrito(nombre, precio) {
+    // Obtener el carrito actual del almacenamiento local
+    let carrito = obtenerCarritoDesdeLocalStorage();
+
+    // Agregar el nuevo producto al carrito
+    carrito.push({ nombre, precio });
+    alert(`"${nombre}" agregado al carrito.`);
+
+    // Guardar el carrito en el almacenamiento local
+    localStorage.setItem('carrito', JSON.stringify(carrito));
+
+    // Actualizar la visualización del carrito
+    mostrarCarrito();
+  }
+
+  // Función para mostrar el carrito y calcular el total
+  function mostrarCarrito() {
+    // Obtener el carrito actual del almacenamiento local
+    let carrito = obtenerCarritoDesdeLocalStorage();
+
+    let total = 0;
+    let carritoListHTML = '';
+
+    if (carrito.length === 0) {
+      document.getElementById('carrito-list').innerHTML = 'El carrito está vacío.';
+      document.getElementById('carrito-total').innerText = '0';
+      return;
+    }
+
+    for (let producto of carrito) {
+      carritoListHTML += `<li>${producto.nombre} - $${producto.precio}</li>`;
+      total += producto.precio;
+    }
+
+    // Actualizar el contenido del carrito
+    document.getElementById('carrito-list').innerHTML = carritoListHTML;
+    document.getElementById('carrito-total').innerText = total.toFixed(2);
+  }
+
+  // Función para obtener el carrito desde el almacenamiento local
+  function obtenerCarritoDesdeLocalStorage() {
+    const carritoJSON = localStorage.getItem('carrito');
+    return carritoJSON ? JSON.parse(carritoJSON) : [];
+  }
+
+  // Función para finalizar la compra
+  function finalizarCompra() {
+    // Obtener el carrito actual del almacenamiento local
+    let carrito = obtenerCarritoDesdeLocalStorage();
+
+    if (carrito.length === 0) {
+      alert('El carrito está vacío. Agrega productos antes de finalizar la compra.');
+      return;
+    }
+
+    let total = carrito.reduce((sum, producto) => sum + producto.precio, 0);
+
+    // Simulación de la finalización de la compra
+    alert(`Compra finalizada. Total: $${total.toFixed(2)}\n¡Gracias por tu compra!`);
+
+    // Reiniciar el carrito después de la compra
+    localStorage.removeItem('carrito');
+
+    // Actualizar la visualización del carrito después de la compra
+    mostrarCarrito();
+  }
+
+  // Llama a mostrarCarrito al cargar la página
+  window.onload = function () {
+    mostrarCarrito();
+  };
+</script>
+
+</body>
+</html>

@@ -1,0 +1,27 @@
+body{
+  background-color: white;
+}
+
+#precio{
+
+    color: #ff4d6d;
+    font-size: 20px;
+}
+
+#imagenes {
+    transition: transform 0.3s; /* Agrega una transición suave para la animación */
+  }
+  
+  #imagenes:hover {
+    transform: scale(1.2); /* Escala la imagen al 120% de su tamaño original al pasar el cursor sobre ella */
+  }
+
+  
+footer{
+
+  background-color: #edede9;
+  
+}
+
+
+ 

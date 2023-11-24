@@ -1,0 +1,23 @@
+#secciones{
+
+    margin-top: 80px;
+    padding-left: 25px ;
+    padding-right: 25px ;
+    margin: 40px;
+}
+
+
+#seccion-ropa {
+    transition: transform 0.3s; /* Agrega una transición suave para la animación */
+  }
+  
+  #seccion-ropa:hover {
+    transform: scale(1.1); /* Escala la imagen al 120% de su tamaño original al pasar el cursor sobre ella */
+  }
+
+  
+footer{
+
+  background-color: #edede9;
+
+}

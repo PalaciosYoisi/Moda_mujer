@@ -1,0 +1,22 @@
+/* Estilo inicial del botón */
+.button {
+    background-color: white;
+    color: black;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 2px solid #ff4d6d; /* Borde inicial del mismo color de la transición */
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s; /* Agregamos border-color a la transición */
+  }
+  
+  /* Estilo cuando el cursor se encuentra sobre el botón */
+  .button:hover {
+    background-color: #ff4d6d;
+    border-color: white; /* Cambiamos el color del borde en :hover */
+  }
+  
+  .text-center{
+
+    margin-top: 20px;
+    
+  }
